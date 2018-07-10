@@ -15,17 +15,11 @@ autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
 "autocmd FileType make           setlocal noexpandtab
 
-"execute pathogen#infect()
+execute pathogen#infect()
 
 " This is for taglist to open on the right side and widther than usual
 let Tlist_Use_Right_Window = 1
 let Tlist_WinWidth = 40
-
-" Consider .ifc files as if they were just C files.
-au BufRead,BufNewFile *.ifc set filetype=c
-
-" Consider .gen files as if they were just C files.
-au BufRead,BufNewFile *.gen set filetype=c
 
 " Needed by vundle.
 set nocompatible              " be iMproved, required
